@@ -8,7 +8,7 @@ const insta=axios.create({
   baseURL:"http://192.168.101.76:3001"
 })
 
-  const [data, setData] = useState(null);
+  const [data, setData] = useState([]);
 
   useEffect(() => {
     // Fetch data using Axios
@@ -24,7 +24,7 @@ const insta=axios.create({
 console.log(data)
   return (
     <div className="App">
-      {data.map((e)=>
+      {data?.map((e)=>
       <header className="App-header">
         <img src={e.image} className="App-logo" alt="logo" />
         <p>
